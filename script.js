@@ -6,8 +6,6 @@ window.onscroll = () => {
     header.classList.toggle('sticky' , window.scrollY > 100);
 }
 
-
-
 // menu icon
 
 let menuIcon = document.querySelector('#menu-icon');
