@@ -130,10 +130,26 @@ section {
   font-size: 3.2rem;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 0.7px var(--main-color); /*Have to look */
-  /* background-image: linear-gradient (var(--main-color), var(--main-color));
-    -webkit-background-clip: text;
-    background-position: -15rem 0; */
+  -webkit-text-stroke: 0.7px var(--main-color); 
+  background-image: linear-gradient(var(--main-color), var(--main-color));
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -33rem 0;
+  animation: animateText 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.content .textanimate h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-right: .3rem solid var(--main-color);
+  animation: animateLine 6s linear infinite;
+  animation-delay: 2s;
+
 }
 
 /* .textanimate h3::before{
@@ -250,6 +266,8 @@ section {
 .socilink a:hover::before {
   width: 100%;
 }
+
+
 
 /* About Page */
 
@@ -906,5 +924,33 @@ ul {
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
+  }
+}
+
+
+
+/* Keyframe for About Page Animation */
+@keyframes animateText {
+
+  0%, 10%, 100%{
+    background-position: -33rem 0;
+  }
+  65%, 85%{
+    background-position: 0rem 0;
+  }
+}
+
+@keyframes animateLine {
+
+  0%, 10%, 100%{
+   width: 0;
+  }
+  65%, 78%, 85%{
+  width: 100%;
+  opacity: 1;
+  }
+
+  75%, 81%{
+    opacity: 0;
   }
 }
