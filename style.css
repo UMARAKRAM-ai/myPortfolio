@@ -170,15 +170,20 @@ section {
 } */
 
 .content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 2rem 0 4rem;
+  font-family: monospace;
+  font-style: italic;
+  line-height: 3rem;
+  font-weight: 700;
+  /* letter-spacing: px; */
 }
 
 .btn-box {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 34.4rem;
+  width: 30.4rem;
   height: 5rem;
   /* border: 2px solid red; */
 }
@@ -189,7 +194,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 15rem;
+  width: 13rem;
   background-color: var(--main-color);
   border: 0.2rem solid var(--main-color);
   border-radius: 0.8rem;
@@ -198,6 +203,7 @@ section {
   font-weight: 600;
   z-index: 1;
   overflow: hidden;
+  /* border: 2px solid red; */
 }
 
 .btn-box .btn:hover {
@@ -306,6 +312,7 @@ span {
   height: 30rem;
   width: 30rem;
   border: 0.4rem solid var(--main-color);
+  transition: 1.5s ease-in-out;
 }
 
 .about-img .spincircle {
@@ -612,8 +619,9 @@ span {
   width: 50%;
   height: 500px;
   margin-bottom: 5rem;
-  backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
-  background: rgba(181, 150, 255, 0.5); 
+  backdrop-filter: blur(5px); 
+  background: rgb(194,53,96);
+  background: linear-gradient(0deg,  rgba(32,134,255,1) 0%, rgba(194,53,96,1) 100%);
 }
 
 .contact-form h1 {
